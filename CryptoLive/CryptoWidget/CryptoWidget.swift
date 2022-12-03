@@ -49,9 +49,9 @@ fileprivate let APIURL = "https://api.coingecko.com/api/v3/coins/markets?vs_curr
 
 struct Crypto: TimelineEntry, Codable {
     var date: Date = .init()
-    let priceChange: Double = 0.0
-    let currentPrice: Double = 0.0
-    let last7Days: SparklineData = .init()
+    var priceChange: Double = 0.0
+    var currentPrice: Double = 0.0
+    var last7Days: SparklineData = .init()
     
     enum CodingKeys: String, CodingKey {
         case priceChange = "price_change_percentage_7d_in_currency"
